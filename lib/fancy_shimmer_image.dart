@@ -22,9 +22,11 @@ class FancyShimmerImage extends StatelessWidget {
     this.shimmerBackColor,
     this.errorWidget,
     this.boxDecoration,
+    this.httpHeaders,
   });
 
   final String imageUrl;
+  final Map<String, String>? httpHeaders;
   final double width;
   final double height;
   final ShimmerDirection shimmerDirection;
@@ -42,6 +44,7 @@ class FancyShimmerImage extends StatelessWidget {
       imageUrl: imageUrl,
       fit: boxFit,
       width: width,
+      httpHeaders: httpHeaders,
       height: height,
       placeholder: (context, url) => ImageShimmerWidget(
         width: width,
